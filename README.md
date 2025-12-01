@@ -76,7 +76,3 @@ Instead, it uses a state-space model with linear scaling, allowing efficient cap
 - Lightweight feature sets retain strong performance
 - HER2 remains the most challenging subtype, but deep learning maintains an advantage
 
----
-
-## 📁 Repository Structure
-
