@@ -25,7 +25,7 @@ This is a **full software pipeline**, not just a standalone model.
 A live, deployed version of the system is available at:
 
 **Live App:**  
-https://yourapp.streamlit.app
+https://brca-predictor-shxl7owfhp6faxf8wi5f6u.streamlit.app
 
 The web app allows users to:
 - Upload or input genomic features
