@@ -27,6 +27,10 @@ for n in names:
     if not hasattr(modeling_mamba, n):
         setattr(modeling_mamba, n, None)
 
+# patch missing MambaMixer attribute for some version mismatches
+if not hasattr(modeling_mamba.MambaMixer, "use_associative_scan"):
+    modeling_mamba.MambaMixer.use_associative_scan = False
+
 # =========================================
 # Page config + simple page routing
 # =========================================
