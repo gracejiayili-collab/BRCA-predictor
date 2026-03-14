@@ -5,9 +5,27 @@ import matplotlib.pyplot as plt
 import torch
 import torch.nn as nn
 from transformers import MambaConfig, MambaModel
+from transformers.models.mamba import modeling_mamba   # 新增
 import joblib
 import json
 import io
+
+
+# =====================================================
+# Fix for missing optional Mamba kernels (SHAP issue)
+# =====================================================
+names = [
+    "selective_state_update",
+    "selective_scan_fn",
+    "causal_conv1d_fn",
+    "causal_conv1d_update",
+    "mamba_inner_fn",
+]
+
+for n in names:
+    print(n, "exists:", hasattr(modeling_mamba, n))
+    if not hasattr(modeling_mamba, n):
+        setattr(modeling_mamba, n, None)
 
 # =========================================
 # Page config + simple page routing
