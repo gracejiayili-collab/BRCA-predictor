@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import torch
 import torch.nn as nn
 from transformers import MambaConfig, MambaModel
-from transformers.models.mamba import modeling_mamba   # 新增
+from transformers.models.mamba import modeling_mamba   # newly added
 import joblib
 import json
 import io
